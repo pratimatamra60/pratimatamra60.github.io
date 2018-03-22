@@ -1,0 +1,305 @@
+body, html {
+  width: 100vw !important;
+  height: 100%;
+  font-size: 65%;
+  /*defines 1rem*/
+  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+  overflow-x: hidden; }
+
+/*CSS animation*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(3rem); }
+  100% {
+    transform: translateY(0); } }
+
+.text-center {
+  text-align: center; }
+
+.button {
+  background-image: linear-gradient(to right bottom, rgba(85, 241, 65, 0.801), rgba(40, 180, 133, 0.801));
+  border: none;
+  color: whitesmoke;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  animation-name: moveUp;
+  animation-duration: 1s; }
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+/*-----------------------------------------*/
+.section-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5% 0 0 0;
+  font-size: 3rem;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, rgba(147, 17, 187, 0.801), rgba(20, 20, 204, 0.801));
+  -webkit-background-clip: text;
+  /*bacground clip only to text*/
+  color: transparent;
+  /*makes backround visible*/ }
+  .section-heading:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+/*---------navigation--------------*/
+#mainNav .navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; }
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: #4FDCFF; }
+
+#mainNav a {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 1.6rem; }
+  #mainNav a:hover {
+    color: #4FDCFF !important; }
+
+/*making navibar transparent in home page and white
+on scrolling*/
+.transparant-nav {
+  background: transparant; }
+
+.white {
+  background: whitesmoke !important;
+  border-bottom: 1px solid rgba(33, 37, 41, 0.1); }
+
+/*----------------About page----------------------------------*/
+#about {
+  background-color: whitesmoke;
+  padding: 10rem 0 10rem 0;
+  margin-top: -15vh;
+  transform: skewY(-7deg);
+  width: 100%; }
+  #about > * {
+    transform: skewY(7deg); }
+  #about img {
+    width: 200px;
+    height: 200px; }
+  #about .text-faded {
+    font-size: 18px;
+    color: #0f0f0e;
+    margin: 0 2rem 15rem 2rem; }
+
+/*----------------Education Section----------------------------------*/
+#education {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, rgba(85, 241, 65, 0.801), rgba(40, 180, 133, 0.801)), url(../img/background.jpg);
+  background-size: cover;
+  transform: skewY(-6deg);
+  margin-top: -10rem; }
+  #education > * {
+    transform: skewY(6deg); }
+  #education .education-detail {
+    margin-top: 5%;
+    margin-bottom: 5%; }
+  #education i {
+    font-size: 60px;
+    margin: auto;
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(147, 17, 187, 0.801), rgba(20, 20, 204, 0.801));
+    -webkit-background-clip: text;
+    /*bacground clip only to text*/
+    color: transparent;
+    /*makes backround visible*/ }
+  #education .feature-box {
+    height: 25rem;
+    padding: 2rem;
+    margin-bottom: 2em;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    transition: transform .3s; }
+    #education .feature-box:hover {
+      transform: translateY(-1.5rem) scale(1.03); }
+
+/*----------------Experience and experienceon----------------------------------*/
+#experience {
+  background-color: whitesmoke;
+  padding: 15rem 0;
+  margin-top: -10vh; }
+  #experience .card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    /*perspective always on parent to prevent fliped card*/
+    position: relative;
+    margin: 5% 10%;
+    background-color: transparent !important;
+    border: none !important;
+    height: 100%;
+    padding-bottom: 5%; }
+  #experience .card:hover .card-front {
+    position: relative;
+    transform: rotateY(180deg);
+    opacity: 0;
+    pointer-events: auto; }
+  #experience .card:hover .card-back {
+    transform: rotateY(0);
+    opacity: 1;
+    pointer-events: auto; }
+  #experience ul {
+    list-style: none;
+    padding: 0; }
+    #experience ul li {
+      top: 30px;
+      font-size: 1.6rem;
+      padding: .5rem;
+      color: whitesmoke;
+      width: 90%;
+      margin: 0 auto; }
+      #experience ul li:not(:last-child) {
+        border-bottom: 1px solid whitesmoke; }
+
+.card-header {
+  font-size: 2rem; }
+
+.card-side {
+  transition: all .5s ease-out;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  /*to hide back of front card*/
+  margin: 0 auto;
+  height: 35rem; }
+
+.card-back {
+  background-image: linear-gradient(to right, rgba(147, 17, 187, 0.801), rgba(20, 20, 204, 0.801));
+  transform: rotateY(180deg);
+  position: absolute;
+  opacity: 0;
+  pointer-events: none; }
+
+.card-row {
+  padding-top: 5%;
+  margin: 0 5px; }
+
+/*----------------Skills section----------------------------------*/
+#skills {
+  padding: 5% 0 5% 0;
+  background-image: linear-gradient(to right, rgba(85, 241, 65, 0.801), rgba(20, 20, 204, 0.801)); }
+
+.skill-list {
+  padding: 5% 10%; }
+
+hr {
+  border-width: 8px;
+  border-color: #3f3fbf;
+  max-width: 60px !important;
+  margin: auto;
+  padding-bottom: 3%; }
+
+i {
+  font-size: 60px;
+  margin: 5px; }
+
+h2 {
+  color: whitesmoke; }
+
+h3 {
+  color: whitesmoke; }
+
+/*----------------Connect page----------------------------------*/
+#connect {
+  background-color: black;
+  padding: 5% 0 5% 0; }
+
+/*-------------------------------------------*/
+header.top-heading {
+  height: 100vh;
+  padding-bottom: 10rem;
+  background: linear-gradient(to right bottom, rgba(147, 17, 187, 0.801), rgba(20, 20, 204, 0.801)), url(../img/patan.jpg);
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); }
+
+.top-heading > div {
+  padding-top: 20rem; }
+  .top-heading > div h1 {
+    font-size: 4rem;
+    color: whitesmoke;
+    animation-name: moveInLeft;
+    animation-duration: 1s; }
+  .top-heading > div hr {
+    border-width: 8px;
+    border-color: whitesmoke !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 6rem !important; }
+
+.homeHeading-sub {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  font-size: 2rem;
+  color: whitesmoke; }
+
+/*---------------------------media--------------------------------*/
+@media only screen and (max-width: 375px) {
+  /*----------------------------------------*/
+  #mainNav {
+    background-color: #fbbf0d !important; }
+  #mainNav a {
+    color: whitesmoke; }
+  #mainNav a .navbar-brand {
+    color: whitesmoke; }
+  h2 li {
+    font-size: 1rem; }
+  /*-------------------------------------*/
+  header.top-heading h1 {
+    font-size: 2rem;
+    padding-top: 5rem; }
+  .top-heading > div {
+    padding-top: 2rem; }
+  header.top-heading h2 {
+    font-size: 1.6rem; }
+  #header a .button {
+    font-size: 5px !important; }
+  /*-------------------------------------------*/
+  #about img {
+    margin-top: 2rem; }
+  #about .text-faded {
+    margin-top: 2rem; }
+  /*-------------------------------------------*/
+  .card-col {
+    padding: 0; }
+  .card-row {
+    width: 100%;
+    margin: 0; } }
+
+@media only screen and (max-width: 992px) {
+  header.top-heading h1 {
+    font-size: 3rem;
+    margin-top: 0; }
+  .button {
+    font-size: 1.6rem; } }

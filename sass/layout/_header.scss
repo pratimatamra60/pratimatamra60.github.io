@@ -1,0 +1,39 @@
+/*-------------------------------------------*/
+header.top-heading{
+    height: 100vh;
+    padding-bottom: 10rem;
+    background: linear-gradient(to right bottom, $color-primary, $color-primary-dark), url(../img/patan.jpg);
+    background-position:center center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    clip-path:  polygon(0 0,100% 0,100% 90vh,0 100%);    
+}
+
+
+.top-heading > div {
+  padding-top: 20rem;
+
+  & h1 {
+    font-size: 4rem;
+    color: $color-smoke-white;
+    animation-name: moveInLeft;
+    animation-duration: 1s;  
+  }
+  
+  & hr{
+    border-width:8px;
+    border-color:$color-smoke-white !important;
+    margin-top:30px;
+    margin-bottom:30px;
+    max-width:6rem !important;
+  }
+}
+
+.homeHeading-sub{
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        font-size: 2rem;
+        color: $color-smoke-white;
+      }

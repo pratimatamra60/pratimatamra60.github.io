@@ -1,0 +1,219 @@
+/*---------navigation--------------*/
+
+#mainNav .navbar-brand{
+    font-weight:700;
+    font-size: $default-font-size;
+    text-transform:uppercase;
+    color:$color-smoke-white;
+    font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+    &:focus,
+    &:hover{color:$color-blue}
+}
+
+
+
+#mainNav a  {
+    color: $color-smoke-white;
+    text-transform: uppercase; 
+    font-size: $default-font-size;  
+
+    &:hover {
+      color: $color-blue !important;
+    }
+  }
+  
+
+/*making navibar transparent in home page and white
+on scrolling*/
+.transparant-nav{
+    background: transparant;
+  }
+.white{
+    background: $color-smoke-white !important;
+    border-bottom:1px solid rgba(33,37,41,.1);   
+}
+
+
+
+ 
+      
+/*----------------About page----------------------------------*/ 
+#about{
+    background-color: $color-smoke-white;
+    padding: 10rem 0 10rem 0;
+    margin-top: -15vh; 
+    transform: skewY(-7deg);
+    width: 100%;
+
+    & > * {
+      transform: skewY(7deg);
+    } 
+  
+    & img {
+      width: 200px;
+      height: 200px;
+     }
+     & .text-faded{
+      font-size: 18px;
+      color: $color-black;
+      margin: 0 2rem 15rem 2rem;
+    }
+  }
+  
+
+
+
+ /*----------------Education Section----------------------------------*/
+ #education {
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark), url(../img/background.jpg);
+    background-size: cover;
+    transform: skewY(-6deg);
+    margin-top: -10rem;
+
+    & > * {
+      transform: skewY(6deg);
+    } 
+  
+    & .education-detail {
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    
+    & i {
+      font-size: 60px;
+      margin: auto;
+      display: inline-block;
+      background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+      -webkit-background-clip: text; /*bacground clip only to text*/
+      color: transparent; /*makes backround visible*/}   
+      
+      
+      & .feature-box {
+        height: 25rem;
+        padding: 2rem;
+        margin-bottom: 2em;
+        background-color: $color-smoke-white;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        transition: transform .3s;
+        &:hover {
+          transform: translateY(-1.5rem) scale(1.03); }
+      }    
+  }
+
+  
+
+/*----------------Experience and experienceon----------------------------------*/
+
+#experience {
+  background-color: $color-smoke-white;
+  padding: 15rem 0;
+  margin-top: -10vh;
+
+  & .card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+      /*perspective always on parent to prevent fliped card*/
+    position: relative;
+    margin: 5% 10%;
+    background-color: transparent !important;
+    border: none !important;
+    height: 100%;
+    padding-bottom: 5%;
+  }
+
+
+ & .card:hover {
+    & .card-front{
+      position: relative;
+      transform: rotateY(180deg);
+      opacity: 0;
+      pointer-events: auto;
+    }
+  
+      & .card-back{
+        transform: rotateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+  
+    & li {
+      top: 30px;
+      font-size: $default-font-size;
+      padding: .5rem;
+      color: $color-smoke-white;
+      width: 90%;
+      margin: 0 auto;
+      &:not(:last-child){
+        border-bottom: 1px solid $color-smoke-white;  
+      }
+    
+    }
+    
+  }
+}
+
+
+
+.card-header{
+  font-size: 2rem;
+}
+.card-side{
+  transition: all .5s ease-out;
+  top: 0;
+  left:0;
+  backface-visibility: hidden;/*to hide back of front card*/
+  margin: 0 auto;
+  height: 35rem;
+}
+
+.card-back{
+  background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+  transform: rotateY(180deg);
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-row{
+  padding-top: 5%;
+  margin: 0 5px;
+}
+/*----------------Skills section----------------------------------*/
+  
+#skills {
+    
+    padding: 5% 0 5% 0;
+    background-image: linear-gradient(to right, $color-green-light, $color-primary-dark);
+  }
+  .skill-list {
+    padding: 5% 10%;
+  }
+  
+   
+  hr{
+    border-width:8px;
+    border-color:$color-blue-dark;
+    max-width:60px !important;
+    margin: auto;
+    padding-bottom: 3%;
+  }
+
+  i{
+    font-size: 60px;
+    margin: 5px;
+  }
+  h2{
+    color: $color-smoke-white;
+  }
+  h3{
+    color: $color-smoke-white;
+  }

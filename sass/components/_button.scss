@@ -1,0 +1,37 @@
+.button {
+    background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark);
+    border: none;
+    color: $color-smoke-white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    animation-name: moveUp;
+    animation-duration: 1s; 
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+  }
+ 
+
+  
+/*-----------------------------------------*/
+.section-heading{
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5% 0 0 0;
+  font-size: 3rem;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+  -webkit-background-clip: text; /*bacground clip only to text*/
+  color: transparent; /*makes backround visible*/
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,76 @@
+@import "base/base";
+@import "base/animation";
+@import "base/utilities";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "components/button";
+
+@import "pages/home";
+@import "layout/footer";
+@import "layout/header";
+
+
+
+/*---------------------------media--------------------------------*/ 
+@media only screen and (max-width: 375px)
+{
+/*----------------------------------------*/
+  #mainNav{
+    background-color: $color-gold !important;
+  }
+  #mainNav a{
+     color: $color-smoke-white;
+   }
+  #mainNav a .navbar-brand{
+     color: $color-smoke-white;
+   }
+ 
+   h2 li{
+     font-size: 1rem;
+   }
+ /*-------------------------------------*/ 
+  header.top-heading h1{
+        font-size: 2rem;
+        padding-top: 5rem;
+      }
+  .top-heading > div {
+        padding-top: 2rem;
+      }
+  header.top-heading h2 {
+        font-size: $default-font-size;
+    }
+
+  #header a .button{
+      font-size: 5px !important;
+    }
+   
+  /*-------------------------------------------*/ 
+  #about img {
+    margin-top: 2rem;
+  }
+  #about .text-faded {
+    margin-top: 2rem;
+  }
+  /*-------------------------------------------*/
+    .card-col {
+      padding: 0;
+    }
+    .card-row{
+      width: 100%;
+      margin: 0;
+    }  
+}
+
+@media only screen and(max-width:992px){
+        header.top-heading h1{
+            font-size:3rem;
+            margin-top: 0;
+        }
+      .button {
+        font-size: $default-font-size;
+      }
+    }  
+    
